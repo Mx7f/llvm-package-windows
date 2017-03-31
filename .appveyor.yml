@@ -38,7 +38,7 @@ environment:
             CRT: msvcrt
 
 install:
-    - call set-env.bat %PLATFORM% %TOOLCHAIN% %CRT%
+    - call set-env.bat %CONFIGURATION% %PLATFORM% %TOOLCHAIN% %CRT%
     - call install.bat
 
 build_script:
