@@ -131,13 +131,14 @@ set CMAKE_CONFIGURE_FLAGS= ^
 	-DLLVM_INCLUDE_TESTS=OFF ^
 	-DLLVM_INCLUDE_TOOLS=OFF ^
 	-DLLVM_INCLUDE_UTILS=OFF
-	
+
 set CMAKE_BUILD_FLAGS= ^
 	--config %CONFIGURATION% ^
 	-- ^
 	/nologo ^
 	/verbosity:minimal ^
-	/consoleloggerparameters:Summary
+	/consoleloggerparameters:Summary ^
+	/maxcpucount
 
 echo ---------------------------------------------------------------------------
 echo LLVM_DOWNLOAD_URL: %LLVM_DOWNLOAD_URL%
