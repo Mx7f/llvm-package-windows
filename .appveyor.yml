@@ -25,12 +25,6 @@ environment:
         -   TOOLCHAIN: msvc12
             CRT: msvcrt
 
-        -   TOOLCHAIN: msvc14
-            CRT: libcmt
-
-        -   TOOLCHAIN: msvc14
-            CRT: msvcrt
-
 install:
     - call set-env.bat %CONFIGURATION% %PLATFORM% %TOOLCHAIN% %CRT%
     - call install.bat
