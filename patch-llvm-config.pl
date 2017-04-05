@@ -1,13 +1,7 @@
 use strict;
 
-my $argCount = @ARGV;
-if (!$argCount)
-{
-	die ("Usage: patch-llvm-config.pl <LLVMConfig.cmake>");
-}
-
-my $fileName = $ARGV [0];
-open (my $file, "<", $fileName) or die ("Can't open $fileName for reading: $!");
+my $fileName = $ARGV [0] || die ("Usage: patch-llvm-config.pl <LLVMConfig.cmake>\n");
+open (my $file, "<", $fileName) || die ("Can't open $fileName for reading: $!\n");
 
 my @body = "get_filename_component (LLVM_ROOT_DIR \${CMAKE_CURRENT_LIST_DIR}/../../.. ABSOLUTE)\n\n";
 
@@ -20,5 +14,5 @@ while (my $s = <$file>)
 	push (@body, $s)
 }
 
-open (my $file, ">", $fileName) or die ("Can't open $fileName for writing: $!");
+open (my $file, ">", $fileName) || die ("Can't open $fileName for writing: $!\n");
 print $file (@body);
