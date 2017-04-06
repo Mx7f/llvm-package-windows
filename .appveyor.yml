@@ -43,8 +43,6 @@ build_script:
 
     - mkdir llvm\build
     - cd llvm\build
-    - set CFLAGS=/YX
-    - set CXXFLAGS=/YX
     - cmake .. %CMAKE_CONFIGURE_FLAGS%
     - cmake --build . %CMAKE_BUILD_FLAGS%
     - cmake --build . --target install %CMAKE_BUILD_FLAGS%

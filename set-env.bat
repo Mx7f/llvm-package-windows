@@ -138,8 +138,7 @@ set CMAKE_BUILD_FLAGS= ^
 	-- ^
 	/nologo ^
 	/verbosity:minimal ^
-	/consoleloggerparameters:Summary ^
-	/maxcpucount
+	/consoleloggerparameters:Summary
 
 echo ---------------------------------------------------------------------------
 echo LLVM_DOWNLOAD_URL: %LLVM_DOWNLOAD_URL%
