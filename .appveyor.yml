@@ -14,17 +14,10 @@ platform:
     - x86
 
 configuration:
-    - Debug
     - Release
 
 environment:
     matrix:
-        -   TOOLCHAIN: msvc12
-            CRT: libcmt
-
-        -   TOOLCHAIN: msvc12
-            CRT: msvcrt
-
         -   TOOLCHAIN: msvc14
             CRT: libcmt
 
